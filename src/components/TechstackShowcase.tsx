@@ -33,7 +33,7 @@ export default function TechStackShowcase({
         <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">My Tech Stack</h1>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-          A collection of technologies I've worked with across various projects and professional experiences.
+          A collection of technologies i worked with across various projects and professional experiences.
         </p>
       </div>
     
