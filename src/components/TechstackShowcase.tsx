@@ -28,10 +28,10 @@ export default function TechStackShowcase({
   const filteredSkills = filter ? skills.filter((skill) => skill.category === filter) : skills
 
   return (
-    <div className="w-full pt-[80px]">
+    <div id="techstack" className="w-full pt-[80px] bg-[#140303] "> 
 
         <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">My Tech Stack</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-300">My Tech Stack</h1>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
           A collection of technologies i worked with across various projects and professional experiences.
         </p>
@@ -58,7 +58,7 @@ export default function TechStackShowcase({
               "px-4 py-2 rounded-full text-sm font-medium transition-colors",
               filter === category
                 ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700",
+                : "bg-gray-300 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700",
             )}
           >
             {category}
@@ -66,7 +66,7 @@ export default function TechStackShowcase({
         ))}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-[20px]">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-[50px]">
         {filteredSkills.map((skill, index) => (
           <motion.div
             key={skill.name}
@@ -77,7 +77,7 @@ export default function TechStackShowcase({
               "relative flex flex-col items-center justify-center p-4 rounded-xl transition-all duration-300",
               hoveredSkill === skill.name
                 ? "bg-slate-100 dark:bg-slate-800 scale-105 shadow-lg"
-                : "bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80",
+                : "bg-gray-300 dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80",
             )}
             onMouseEnter={() => setHoveredSkill(skill.name)}
             onMouseLeave={() => setHoveredSkill(null)}

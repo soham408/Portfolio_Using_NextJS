@@ -92,15 +92,16 @@ export function ProjectsShowcase() {
   })
 
   return (
-    <div className="space-y-6">
+
+    <div id="projects" className="space-y-6 bg-[#140303]">
 
       <div className="flex justify-center pt-20 mb-2">
-        <h1 className="text-4xl font-bold font-montserrat bg-black-50 text-white px-4 py-2 rounded-md">
+        <h1 className="text-4xl font-bold font-montserrat bg-[#140303] text-gray-300 px-4 py-2 rounded-md">
         Projects Work
         </h1>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center p-[20px]">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center p-[50px]">
         {/* <div className="relative w-full sm:w-64 md:w-80">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input
@@ -141,7 +142,7 @@ export function ProjectsShowcase() {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="h-full flex flex-col ">
+    <Card className="h-full flex flex-col bg-gray-300">
       <CardHeader>
         <div className="flex justify-between items-start">
           <CardTitle className="text-xl">{project.title}</CardTitle>
