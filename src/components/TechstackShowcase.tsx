@@ -136,6 +136,7 @@ import {
   SiPython,
   SiCanva,
   SiClerk,
+  SiResend,
   // SiDjango,
   // SiTensorflow,
 } from "react-icons/si"
@@ -159,7 +160,7 @@ const defaultSkills: Skill[] = [
     level: "intermediate",
   },
   { name: "HTML5", icon: <SiHtml5 className="w-10 h-10 text-orange-500" />, category: "Frontend", level: "expert" },
-  { name: "CSS3", icon: <SiCss3 className="w-10 h-10 text-blue-400" />, category: "Frontend", level: "intermediate" },
+  { name: "CSS3", icon: <SiCss3 className="w-10 h-10 text-blue-500" />, category: "Frontend", level: "intermediate" },
   {
     name: "Tailwind",
     icon: <SiTailwindcss className="w-10 h-10 text-cyan-500" />,
@@ -175,13 +176,13 @@ const defaultSkills: Skill[] = [
   },
   {
     name: "Ms Sql",
-    icon: <DiMsqlServer className="w-10 h-10 text-red-300" />,
+    icon: <DiMsqlServer className="w-10 h-10 text-red-500" />,
     category: "Backend",
     level: "beginner",
   },
   {
     name: "Appwrite",
-    icon: <SiAppwrite className="w-10 h-10 text-red-400" />,
+    icon: <SiAppwrite className="w-10 h-10 text-red-600" />,
     category: "Backend",
     level: "intermediate",
   },
@@ -205,9 +206,15 @@ const defaultSkills: Skill[] = [
   },
   {
     name: "Linux Ubuntu",
-    icon: <FaUbuntu className="w-10 h-10 text-orange-500" />,
+    icon: <FaUbuntu className="w-10 h-10 text-orange-600" />,
     category: "Other",
     level: "beginner",
+  },
+  {
+    name: "Resend Email",
+    icon: <SiResend className="w-10 h-10 text-black-500" />,
+    category: "Other",
+    level: "intermediate",
   },
   // { name: "Express", icon: <SiExpress className="w-10 h-10" />, category: "Backend", level: "advanced" },
   // {
