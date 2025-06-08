@@ -23,8 +23,8 @@ export default function NavbarComponent() {
                 S
               </div>
             </div> */}
-            <span className="text-xl font-bold tracking-wider text-gray-400 uppercase
-            ">SOHAM ∞ /</span>
+            <span className="text-4xl font-bold tracking-wider text-gray-400 uppercase
+            ">∞</span>
           </div>
           <nav className="">
             <ul className="flex space-x-8">
