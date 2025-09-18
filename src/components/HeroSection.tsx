@@ -43,7 +43,7 @@ export default function HeroSection() {
             <div className="relative">
                 <img className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2" src="/" alt="" />
 
-                <img className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="https://res.cloudinary.com/dpn5b2cx8/image/upload/v1746712678/Untitled_design_2_ssfuve.png" alt="" />
+                <img className="rounded-xl relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="https://res.cloudinary.com/dpn5b2cx8/image/upload/v1758179557/0A7F9CA9-46F3-49B9-AA8D-75A14E18DD7E_cqevtu.jpg" alt="" />
             </div>
         </div>
         
