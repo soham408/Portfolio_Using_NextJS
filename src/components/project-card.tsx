@@ -48,7 +48,7 @@ const projectsData = [
     technologies: ["Next.js","Gemini 2.5 Flash"],
     category: "frontend",
     githubUrl: "https://github.com/soham408/AIwithNextJS",
-    demoUrl: "/",
+    demoUrl: "https://a-iwith-next-9qhjv6q1i-soham-bambades-projects.vercel.app/",
     featured: true,
   },
   // {
