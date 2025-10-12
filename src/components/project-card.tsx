@@ -43,13 +43,13 @@ const projectsData = [
   // },
   {
     id: 4,
-    title: "AI With NextJS",
+    title: "AI With NextJS (Gemini 2.5 Flash)",
     description: "This Is The Next JS AI Project With Gemini 2.5 Flash.",
     technologies: ["Next.js","Gemini 2.5 Flash"],
     category: "frontend",
     githubUrl: "https://github.com/soham408/AIwithNextJS",
     demoUrl: "https://a-iwith-next-9qhjv6q1i-soham-bambades-projects.vercel.app/",
-    featured: true,
+    featured: false,
   },
   // {
   //   id: 5,
