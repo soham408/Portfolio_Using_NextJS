@@ -101,7 +101,7 @@ export function ProjectsShowcase() {
         </h1>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center p-[50px]">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center p-[100px]">
         {/* <div className="relative w-full sm:w-64 md:w-80">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input

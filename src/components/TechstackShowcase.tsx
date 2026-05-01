@@ -10,7 +10,7 @@ type Skill = {
   name: string
   icon: React.ReactNode
   category: string
-  level?: "beginner" | "intermediate" | "advanced" | "expert"
+  // level?: "beginner" | "intermediate" | "advanced" | "expert"
 }
 
 type TechStackProps = {
@@ -84,21 +84,25 @@ export default function TechStackShowcase({
           >
             <div className="w-12 h-12 mb-3 flex items-center justify-center">{skill.icon}</div>
             <h3 className="text-sm font-medium text-center">{skill.name}</h3>
-            {skill.level && hoveredSkill === skill.name && (
+            {
+            // skill.level && 
+            hoveredSkill === skill.name && (
               <div className="absolute -top-2 -right-2">
-                <span
+                {/* <span
                   className={cn(
                     "text-xs px-2 py-1 rounded-full font-medium",
-                    skill.level === "beginner" && "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300",
+                    skill.level === "beginner" && 
+                    "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300",
                     skill.level === "intermediate" &&
                       "bg-teal-100 text-teal-700 dark:bg-teal-900/50 dark:text-teal-300",
                     skill.level === "advanced" &&
                       "bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300",
-                    skill.level === "expert" && "bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300",
+                    skill.level === "expert" && 
+                    "bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300",
                   )}
                 >
                   {skill.level}
-                </span>
+                </span> */}
               </div>
             )}
           </motion.div>
@@ -110,21 +114,21 @@ export default function TechStackShowcase({
 
 // Import these at the top of your file
 import {
-  SiReact,
+  // SiReact,
   SiNextdotjs,
-  SiTypescript,
+  // SiTypescript,
   SiJavascript,
   SiHtml5,
   SiCss3,
   SiTailwindcss,
-  SiNodedotjs,
+  // SiNodedotjs,
   SiAppwrite,
   // SiExpress,
   // SiMongodb,
   // SiPostgresql,
   // SiDocker,
   // SiKubernetes,
-  SiGit,
+  // SiGit,
   SiGithub,
   // SiAmazon,
   // SiFirebase,
@@ -133,88 +137,95 @@ import {
   // SiFigma,
   // SiSwift,
   // SiFlutter,
-  SiPython,
-  SiCanva,
+  // SiPython,
+  // SiCanva,
   SiClerk,
   SiResend,
   // SiDjango,
   // SiTensorflow,
 } from "react-icons/si"
 import { VscVscode } from "react-icons/vsc"
-import { FaUbuntu } from "react-icons/fa"
-import { DiMsqlServer } from "react-icons/di"
+// import { FaUbuntu } from "react-icons/fa"
+// import { DiMsqlServer } from "react-icons/di"
 
 const defaultSkills: Skill[] = [
-  { name: "React", icon: <SiReact className="w-10 h-10 text-blue-500" />, category: "Frontend", level: "intermediate" },
-  { name: "Next.js", icon: <SiNextdotjs className="w-10 h-10" />, category: "Frontend", level: "intermediate" },
-  {
-    name: "TypeScript",
-    icon: <SiTypescript className="w-10 h-10 text-blue-600" />,
-    category: "Frontend",
-    level: "beginner",
+  // { name: "React", icon: <SiReact className="w-10 h-10 text-blue-500" />, category: "Frontend", level: "intermediate" },
+
+  { name: "Next.js", icon: <SiNextdotjs className="w-10 h-10" />, category: "Frontend", 
+    // level: "intermediate" 
   },
+  // {
+  //   name: "TypeScript",
+  //   icon: <SiTypescript className="w-10 h-10 text-blue-600" />,
+  //   category: "Frontend",
+  //   level: "beginner",
+  // },
   {
     name: "JavaScript",
     icon: <SiJavascript className="w-10 h-10 text-yellow-400" />,
     category: "Frontend",
-    level: "intermediate",
+    // level: "intermediate",
   },
-  { name: "HTML5", icon: <SiHtml5 className="w-10 h-10 text-orange-500" />, category: "Frontend", level: "expert" },
-  { name: "CSS3", icon: <SiCss3 className="w-10 h-10 text-blue-500" />, category: "Frontend", level: "intermediate" },
+  { name: "HTML5", icon: <SiHtml5 className="w-10 h-10 text-orange-500" />, category: "Frontend", 
+    // level: "expert" 
+  },
+  { name: "CSS3", icon: <SiCss3 className="w-10 h-10 text-blue-500" />, category: "Frontend", 
+    // level: "intermediate" 
+  },
   {
     name: "Tailwind",
     icon: <SiTailwindcss className="w-10 h-10 text-cyan-500" />,
     category: "Frontend",
-    level: "intermediate",
+    // level: "intermediate",
   },
 
-  {
-    name: "Node.js",
-    icon: <SiNodedotjs className="w-10 h-10 text-green-600" />,
-    category: "Backend",
-    level: "beginner",
-  },
-  {
-    name: "Ms Sql",
-    icon: <DiMsqlServer className="w-10 h-10 text-red-500" />,
-    category: "Backend",
-    level: "beginner",
-  },
+  // {
+  //   name: "Node.js",
+  //   icon: <SiNodedotjs className="w-10 h-10 text-green-600" />,
+  //   category: "Backend",
+  //   level: "beginner",
+  // },
+  // {
+  //   name: "Ms Sql",
+  //   icon: <DiMsqlServer className="w-10 h-10 text-red-500" />,
+  //   category: "Backend",
+  //   level: "beginner",
+  // },
   {
     name: "Appwrite",
     icon: <SiAppwrite className="w-10 h-10 text-red-600" />,
     category: "Backend",
-    level: "intermediate",
+    // level: "intermediate",
   },
-  {
-    name: "Canva",
-    icon: <SiCanva className="w-10 h-10 text-blue-600" />,
-    category: "Design",
-    level: "intermediate",
-  },
+  // {
+  //   name: "Canva",
+  //   icon: <SiCanva className="w-10 h-10 text-blue-600" />,
+  //   category: "Design",
+  //   level: "intermediate",
+  // },
   {
     name: "Clerk",
     icon: <SiClerk className="w-10 h-10 text-blue-600" />,
     category: "Other",
-    level: "intermediate",
+    // level: "intermediate",
   },
   {
     name: "VS Code",
     icon: <VscVscode className="w-10 h-10 text-blue-600" />,
     category: "Other",
-    level: "expert",
+    // level: "expert",
   },
-  {
-    name: "Linux Ubuntu",
-    icon: <FaUbuntu className="w-10 h-10 text-orange-600" />,
-    category: "Other",
-    level: "beginner",
-  },
+  // {
+  //   name: "Linux Ubuntu",
+  //   icon: <FaUbuntu className="w-10 h-10 text-orange-600" />,
+  //   category: "Other",
+  //   level: "beginner",
+  // },
   {
     name: "Resend Email",
     icon: <SiResend className="w-10 h-10 text-black-500" />,
     category: "Other",
-    level: "intermediate",
+    // level: "intermediate",
   },
   // { name: "Express", icon: <SiExpress className="w-10 h-10" />, category: "Backend", level: "advanced" },
   // {
@@ -247,8 +258,11 @@ const defaultSkills: Skill[] = [
   //   category: "DevOps",
   //   level: "beginner",
   // },
-  { name: "Git", icon: <SiGit className="w-10 h-10 text-orange-600" />, category: "DevOps", level: "intermediate" },
-  { name: "GitHub", icon: <SiGithub className="w-10 h-10" />, category: "DevOps", level: "advanced" },
+  // { name: "Git", icon: <SiGit className="w-10 h-10 text-orange-600" />, category: "DevOps", level: "intermediate" },
+
+  { name: "GitHub", icon: <SiGithub className="w-10 h-10" />, category: "DevOps", 
+    // level: "advanced" 
+  },
   // {
   //   name: "AWS",
   //   icon: <SiAmazon className="w-10 h-10 text-orange-400" />,
@@ -258,7 +272,8 @@ const defaultSkills: Skill[] = [
 
   // { name: "Figma", icon: <SiFigma className="w-10 h-10 text-purple-500" />, category: "Design", level: "intermediate" },
 
-  { name: "Python", icon: <SiPython className="w-10 h-10 text-blue-500" />, category: "Other", level: "beginner" },
+  // { name: "Python", icon: <SiPython className="w-10 h-10 text-blue-500" />, category: "Other", level: "beginner" },
+
   // { name: "Django", icon: <SiDjango className="w-10 h-10 text-green-800" />, category: "Other", level: "beginner" },
   // {
   //   name: "TensorFlow",

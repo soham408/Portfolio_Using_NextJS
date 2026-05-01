@@ -57,7 +57,7 @@ export default function NavbarComponent() {
 
           
 
-          <Link href="https://drive.google.com/file/d/1NVQY0QIMFBi_-gLcTUIsVNCFHgj9AvbC/view?usp=drive_link"
+          <Link href="https://drive.google.com/file/d/1x5GLQo7S9gsARk1QRYBk_sr2l45vKzYu/view?usp=sharing"
           
           target="_blank"
           rel="noopener noreferrer"
