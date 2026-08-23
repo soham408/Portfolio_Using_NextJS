@@ -31,7 +31,7 @@ export default function TechStackShowcase({
     <div id="techstack" className="w-full pt-[80px] bg-[#140303] "> 
 
         <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-300">My Tech Stack</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-3 text-center text-gray-300">My Tech Stack</h1>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
           A collection of technologies i worked with across various projects and professional experiences.
         </p>
@@ -66,7 +66,8 @@ export default function TechStackShowcase({
         ))}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-[50px]">
+        <div className="w-full max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-4 p-6">
+
         {filteredSkills.map((skill, index) => (
           <motion.div
             key={skill.name}

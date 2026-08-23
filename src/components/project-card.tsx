@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent } from "@/components/ui/tabs"
 
-// Sample project data - replace with your own projects
+// Sample project data 
 const projectsData = [
   {
     id: 1,
@@ -30,7 +30,7 @@ const projectsData = [
     demoUrl: "https://studior20.vercel.app/",
     featured: false,
   },
-  // {
+  //   {
   //   id: 3,
   //   title: "Blog App",
   //   description:
@@ -45,13 +45,13 @@ const projectsData = [
     id: 4,
     title: "AI With NextJS (Gemini 2.5 Flash)",
     description: "This Is The Next JS AI Project With Gemini 2.5 Flash.",
-    technologies: ["Next.js","Gemini 2.5 Flash"],
+    technologies: ["Next.js", "Gemini 2.5 Flash"],
     category: "frontend",
     githubUrl: "https://github.com/soham408/AIwithNextJS",
     demoUrl: "https://a-iwith-next-9qhjv6q1i-soham-bambades-projects.vercel.app/",
     featured: false,
   },
-  // {
+  //   {
   //   id: 5,
   //   title: "Markdown Note Taking App",
   //   description: "A markdown-based note-taking application with organization features and cloud sync.",
@@ -92,47 +92,48 @@ export function ProjectsShowcase() {
   })
 
   return (
-
     <div id="projects" className="space-y-6 bg-[#140303]">
 
-      <div className="flex justify-center pt-20 mb-2">
-        <h1 className="text-4xl font-bold font-montserrat bg-[#140303] text-gray-300 px-4 py-2 rounded-md">
-        Projects Work
+      
+      <div className="flex justify-center pt-10 sm:pt-16 lg:pt-20 mb-2">
+        <h1 className="text-3xl sm:text-4xl font-bold font-montserrat bg-[#140303] text-gray-300 px-4 py-2 rounded-md">
+          Projects Work
         </h1>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center p-[100px]">
-        {/* <div className="relative w-full sm:w-64 md:w-80">
-          <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Search projects..."
-            className="pl-8"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div> */}
-        <Tabs defaultValue="all" className="w-full sm:w-auto" onValueChange={setActiveTab}>
-          {/* <TabsList>
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="featured">Featured</TabsTrigger>
-            <TabsTrigger value="frontend">Frontend</TabsTrigger>
-            <TabsTrigger value="backend">Backend</TabsTrigger>
-            <TabsTrigger value="fullstack">Full Stack</TabsTrigger>
-          </TabsList> */}
-          <TabsContent value={activeTab} className="mt-6">
+    
+      <div className="flex flex-col items-center gap-6 px-4 sm:px-10 lg:px-20">
+
+        
+        <Tabs
+          defaultValue="all"
+          className="w-full flex flex-col items-center"
+          onValueChange={setActiveTab}
+        >
+
+        
+
+          <TabsContent value={activeTab} className="mt-6 w-full flex justify-center">
+
             {filteredProjects.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+
                 {filteredProjects.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
+
               </div>
+
             ) : (
+
               <div className="text-center py-12">
                 <Code2 className="mx-auto h-12 w-12 text-muted-foreground" />
-                {/* <h3 className="mt-4 text-lg font-semibold">No projects found</h3>
-                <p className="text-muted-foreground">Try adjusting your search or filter criteria.</p> */}
+                
               </div>
+
             )}
+
           </TabsContent>
         </Tabs>
       </div>
@@ -142,15 +143,23 @@ export function ProjectsShowcase() {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="h-full flex flex-col bg-gray-300">
-      <CardHeader>
+    <Card className="h-full flex flex-col bg-gray-300 w-full max-w-sm mx-auto">
+
+      <CardHeader className="p-4">
         <div className="flex justify-between items-start">
-          <CardTitle className="text-xl">{project.title}</CardTitle>
+          <CardTitle className="text-lg sm:text-xl">
+            {project.title}
+          </CardTitle>
+
           {project.featured && <Badge>Featured</Badge>}
         </div>
-        <CardDescription className="line-clamp-2">{project.description}</CardDescription>
+
+        <CardDescription className="line-clamp-2 text-sm">
+          {project.description}
+        </CardDescription>
       </CardHeader>
-      <CardContent className="flex-grow">
+
+      <CardContent className="flex-grow p-4 pt-0">
         <div className="flex flex-wrap gap-2 mt-2">
           {project.technologies.map((tech) => (
             <Badge key={tech} variant="secondary">
@@ -159,13 +168,15 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
+
+      <CardFooter className="flex justify-between p-4 pt-0">
         <Button variant="outline" size="sm" asChild>
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" />
             Code
           </a>
         </Button>
+
         <Button size="sm" asChild>
           <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="mr-2 h-4 w-4" />
@@ -173,6 +184,7 @@ function ProjectCard({ project }: { project: Project }) {
           </a>
         </Button>
       </CardFooter>
+
     </Card>
   )
 }

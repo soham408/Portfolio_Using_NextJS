@@ -146,10 +146,10 @@ import { Github, LinkedinIcon, Mail, X } from "lucide-react"
 
 export default function HeroSection() {
   const images = [
-    "https://res.cloudinary.com/dpn5b2cx8/image/upload/v1746712678/Untitled_design_2_ssfuve.png",
-    "https://res.cloudinary.com/dpn5b2cx8/image/upload/v1746516117/Green_and_White_Modern_Organic_Logo_1_qzdqva.png",
+    "https://res.cloudinary.com/dpn5b2cx8/image/upload/v1773854476/a47f44da-dd15-4836-8dc5-31b04b5f3ab8.png",
+    "https://res.cloudinary.com/dpn5b2cx8/image/upload/v1787496181/IMG_20220215_174315_trmifm.jpg",
     "https://res.cloudinary.com/dpn5b2cx8/image/upload/v1758177425/C53D024C-A4A4-4195-8A98-4C915F4A9DF9_uoalwi.jpg",
-    // You can add more images here easily
+  
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -162,7 +162,8 @@ export default function HeroSection() {
   }, [images.length]);
 
   return (
-    <section className="pt-10 overflow-hidden bg-[#140303] md:pt-0 sm:pt-16 2xl:pt-16">
+    // <section className="pt-10 overflow-hidden bg-[#140303] md:pt-0 sm:pt-16 2xl:pt-16">
+    <section className="pt-10 overflow-hidden bg-white text-black dark:bg-[#140303] dark:text-white md:pt-0 sm:pt-16 2xl:pt-16">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid items-center grid-cols-1 md:grid-cols-2 pt-[40px] gap-8">
           
