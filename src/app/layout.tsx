@@ -14,9 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// export const metadata: Metadata = {
+//   title: "soham.web",
+//   description: "My Portfolio Website",
+// };
+
 export const metadata: Metadata = {
   title: "soham.web",
   description: "My Portfolio Website",
+
+  verification: {
+    google: "PvHLWXtetK6KohyotWf4YRr5JqOMf4UdsQ7LP3JAXMw",
+  },
 };
 
 export default function RootLayout({
