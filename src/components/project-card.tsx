@@ -76,6 +76,7 @@ const projectsData = [
 type Project = (typeof projectsData)[0]
 
 export function ProjectsShowcase() {
+
   const [searchQuery] = useState("")
   const [activeTab, setActiveTab] = useState("all")
 
