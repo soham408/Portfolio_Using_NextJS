@@ -102,37 +102,29 @@
 
 
 
+
 "use client";
 
-import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { Github, LinkedinIcon, Mail, X } from "lucide-react";
 
 export default function HeroSection() {
-  const images = [
-    "https://res.cloudinary.com/dpn5b2cx8/image/upload/f_jpg/v1790921265/20260914_124028_vqgu9x.heic"
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
+  const backgroundImage =
+    "https://res.cloudinary.com/dpn5b2cx8/image/upload/f_jpg/v1790921265/20260914_124028_vqgu9x.heic";
 
   return (
     <section className="relative min-h-screen overflow-hidden text-white">
-      
       {/* Full Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={images[0]}
-          alt="Background"
-          className="h-full w-full object-cover"
+        <Image
+          src={backgroundImage}
+          alt="Soham Bambade"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
         />
 
         {/* Dark Overlay */}
@@ -142,13 +134,12 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid items-center min-h-screen grid-cols-1 md:grid-cols-2 pt-[40px] gap-8">
-
           {/* Text Content */}
           <div>
             <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-              Hey..! I am {}
+              Hey..! I am
               <br className="block sm:hidden" />
-               SOHAM
+              SOHAM
             </h2>
 
             <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-200 md:mt-8">
@@ -156,11 +147,11 @@ export default function HeroSection() {
             </p>
 
             <div className="flex gap-4 mt-8">
-
               {/* GitHub */}
               <Link
                 href="https://github.com/soham408"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -176,6 +167,7 @@ export default function HeroSection() {
               <Link
                 href="https://www.linkedin.com/in/soham408/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -191,6 +183,7 @@ export default function HeroSection() {
               <Link
                 href="https://x.com/soham_bambade"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -198,7 +191,7 @@ export default function HeroSection() {
                   className="border-white/40 hover:bg-white/20 bg-black/20 backdrop-blur-sm"
                 >
                   <X className="h-4 w-4 text-white" />
-                  <span className="sr-only">Twitter</span>
+                  <span className="sr-only">X</span>
                 </Button>
               </Link>
 
@@ -213,51 +206,12 @@ export default function HeroSection() {
                   <span className="sr-only">Email</span>
                 </Button>
               </Link>
-
             </div>
           </div>
-
-          {/* Existing Image Slider */}
-          <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-xl shadow-2xl">
-
-            {/* <div
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
-            >
-              {images.map((src, index) => (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0"
-                >
-                  <img
-                    src={src}
-                    alt={`Slide ${index}`}
-                    className="w-full h-auto object-cover aspect-[4/5] md:aspect-square"
-                  />
-                </div>
-              ))}
-            </div> */}
-
-            {/* Slide Indicators */}
-            {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-              {images.map((_, index) => (
-                <div
-                  key={index}
-                  className={`h-1.5 w-1.5 rounded-full transition-all ${
-                    currentIndex === index
-                      ? "bg-white w-4"
-                      : "bg-white/30"
-                  }`}
-                />
-              ))}
-            </div> */}
-
-          </div>
-
         </div>
       </div>
     </section>
   );
 }
+
+
