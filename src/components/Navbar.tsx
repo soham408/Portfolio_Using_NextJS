@@ -262,67 +262,50 @@ export default function NavbarComponent() {
 
           {/* Contacts */}
 
-          <div className="flex gap-13 mt-60">
-              {/* GitHub */}
-              <Link
-                href="https://github.com/soham408"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="border-white/40 hover:bg-white/20 bg-black/20 backdrop-blur-sm"
-                >
-                  <Github className="h-4 w-4 text-white" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
+         {/* Social Contacts */}
+<div className="mt-8 grid grid-cols-4 gap-3 border-t border-white/15 pt-5">
+  {/* GitHub */}
+  <Link
+    href="https://github.com/soham408"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub profile"
+    className="flex h-11 w-full items-center justify-center rounded-lg border border-white/30 bg-white/5 text-white transition-colors hover:bg-white/15 hover:border-red-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+  >
+    <Github className="h-5 w-5 shrink-0" />
+  </Link>
 
-              {/* LinkedIn */}
-              <Link
-                href="https://www.linkedin.com/in/soham408/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="border-white/40 hover:bg-white/20 bg-black/20 backdrop-blur-sm"
-                >
-                  <LinkedinIcon className="h-4 w-4 text-white" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
+  {/* LinkedIn */}
+  <Link
+    href="https://www.linkedin.com/in/soham408/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn profile"
+    className="flex h-11 w-full items-center justify-center rounded-lg border border-white/30 bg-white/5 text-white transition-colors hover:bg-white/15 hover:border-red-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+  >
+    <LinkedinIcon className="h-5 w-5 shrink-0" />
+  </Link>
 
-              {/* X */}
-              <Link
-                href="https://x.com/soham_bambade"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="border-white/40 hover:bg-white/20 bg-black/20 backdrop-blur-sm"
-                >
-                  <X className="h-4 w-4 text-white" />
-                  <span className="sr-only">X</span>
-                </Button>
-              </Link>
+  {/* X */}
+  <Link
+    href="https://x.com/soham_bambade"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X profile"
+    className="flex h-11 w-full items-center justify-center rounded-lg border border-white/30 bg-white/5 text-white transition-colors hover:bg-white/15 hover:border-red-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+  >
+    <X className="h-5 w-5 shrink-0" />
+  </Link>
 
-              {/* Email */}
-              <Link href="mailto:slbambade01@gmail.com">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="border-white/40 hover:bg-white/20 bg-black/20 backdrop-blur-sm"
-                >
-                  <Mail className="h-4 w-4 text-white" />
-                  <span className="sr-only">Email</span>
-                </Button>
-              </Link>
-            </div>
+  {/* Email */}
+  <Link
+    href="mailto:slbambade01@gmail.com"
+    aria-label="Send email"
+    className="flex h-11 w-full items-center justify-center rounded-lg border border-white/30 bg-white/5 text-white transition-colors hover:bg-white/15 hover:border-red-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+  >
+    <Mail className="h-5 w-5 shrink-0" />
+  </Link>
+</div>
 
           </section>
         </div>
