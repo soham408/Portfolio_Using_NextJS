@@ -4,12 +4,14 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { Github, LinkedinIcon, Mail, X } from "lucide-react";
+import PageEntrance from "./ui/PageEntrance";
 
 export default function HeroSection() {
   const backgroundImage =
     "https://res.cloudinary.com/dpn5b2cx8/image/upload/f_jpg/v1790921265/20260914_124028_vqgu9x.heic";
 
   return (
+    <PageEntrance>
     <section className="relative min-h-screen overflow-hidden text-white">
       {/* Full Background Image */}
       <div className="absolute inset-0 z-0">
@@ -107,6 +109,8 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+    </ PageEntrance>
+
   );
 }
 
